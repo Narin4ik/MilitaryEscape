@@ -1,4 +1,3 @@
-﻿using Exiled.API.Enums;
 using Exiled.API.Features;
 using System;
 
@@ -7,7 +6,7 @@ namespace MilitaryEscape
     public class Plugin : Plugin<Config>
     {
         public override string Name => "MilitaryEscape";
-        public override string Author => "Narin";
+        public override string Author => "Narin & Ruslan0308c";
         public override Version Version => new Version(1, 0, 0);
         public override Version RequiredExiledVersion => new Version(9, 0, 0);
 
