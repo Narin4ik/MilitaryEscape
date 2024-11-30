@@ -37,7 +37,7 @@ namespace MilitaryEscape
             {
                 case SpawnableTeamType.ChaosInsurgency:
                 case SpawnableTeamType.NineTailedFox:
-                    Respawn.GrantTickets(PlayerRolesUtils.GetFaction(player.Role), +5);
+                    Respawn.GrantTickets(PlayerRolesUtils.GetFaction(player.Role), 5);
                     break;
             }
 
