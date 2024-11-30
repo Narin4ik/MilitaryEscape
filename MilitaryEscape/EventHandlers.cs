@@ -1,4 +1,4 @@
-﻿using Exiled.API.Features;
+using Exiled.API.Features;
 using PlayerRoles;
 using Respawning;
 
@@ -6,6 +6,7 @@ namespace MilitaryEscape
 {
     public class EventHandlers
     {
+
         public void OnPlayerEscape(Exiled.Events.EventArgs.Player.EscapingEventArgs ev)
         {
             if (!ev.Player.IsCuffed)
@@ -38,6 +39,7 @@ namespace MilitaryEscape
                 case SpawnableTeamType.ChaosInsurgency:
                 case SpawnableTeamType.NineTailedFox:
                     Respawn.GrantTickets(PlayerRolesUtils.GetFaction(player.Role), 5);
+
                     break;
             }
 
