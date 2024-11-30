@@ -41,14 +41,6 @@ namespace MilitaryEscape
                     break;
             }
 
-            //if (team == SpawnableTeamType.ChaosInsurgency)
-            //{
-            //}
-            //else if (team == )
-            //{
-            //    RespawnTokensManager.GrantTokens(team, +5);
-            //}
-
             Log.Debug($"Player {player.Nickname} escaped and was converted to {newRole}. Tickets for {team} adjusted.");
         }
     }
