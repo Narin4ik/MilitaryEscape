@@ -33,14 +33,21 @@ namespace MilitaryEscape
         {
             player.Role.Set(newRole);
 
-            if (team == SpawnableTeamType.ChaosInsurgency)
+            switch (team)
             {
-                RespawnTokensManager.GrantTokens(team, +5);
+                case SpawnableTeamType.ChaosInsurgency:
+                case SpawnableTeamType.NineTailedFox:
+                    Respawn.GrantTickets(PlayerRolesUtils.GetFaction(player.Role), +5);
+                    break;
             }
-            else if (team == SpawnableTeamType.NineTailedFox)
-            {
-                RespawnTokensManager.GrantTokens(team, +5);
-            }
+
+            //if (team == SpawnableTeamType.ChaosInsurgency)
+            //{
+            //}
+            //else if (team == )
+            //{
+            //    RespawnTokensManager.GrantTokens(team, +5);
+            //}
 
             Log.Debug($"Player {player.Nickname} escaped and was converted to {newRole}. Tickets for {team} adjusted.");
         }
